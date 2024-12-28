@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
 import 'CreateNewPassword.dart'; 
-import 'ResetPassword.dart'; // Import CreateNewPasswordPage
+import 'ResetPassword.dart';
+import 'HomeScreen.dart'; // Import CreateNewPasswordPage
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -98,8 +99,14 @@ class LoginPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
+                      
                       onPressed: () {
-                        // Add login functionality here
+                       Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
+      ),
+    ); // Add login functionality here
                       },
                       child: const Text(
                         'تسجيل الدخول',
@@ -159,3 +166,4 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
